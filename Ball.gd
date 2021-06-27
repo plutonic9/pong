@@ -1,19 +1,12 @@
-extends KinematicBody2D
+extends Node2D
 
 var pos_x: int
 var pos_y: int
 
 export var speed : int
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
 	pos_x = 0
 	pos_y = 0
 	speed = 200
@@ -30,4 +23,5 @@ func _physics_process(delta):
 	
 	velocity = velocity.normalized() * speed
 	
-	move_and_slide(velocity)
+	position += velocity * delta
+
