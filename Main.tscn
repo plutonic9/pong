@@ -10,8 +10,24 @@
 material = SubResource( 1 )
 
 [node name="Wall" type="ColorRect" parent="TopWall"]
+margin_top = 60.0
 margin_right = 1920.0
-margin_bottom = 20.0
+margin_bottom = 80.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomWall" type="Area2D" parent="."]
+material = SubResource( 1 )
+position = Vector2( 0, -8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Wall" type="ColorRect" parent="BottomWall"]
+margin_top = 880.0
+margin_right = 1920.0
+margin_bottom = 900.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
