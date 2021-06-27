@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 var pos_x: int
 var pos_y: int
@@ -14,15 +14,15 @@ export var speed : int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-	pos_x = 100
-	pos_y = 100
-	speed = 800
+	pos_x = 0
+	pos_y = 0
+	speed = 300
 	position = Vector2(pos_x, pos_y)
 	
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):	
+func _physics_process(delta):	
 	var velocity = Vector2()
 	
 	velocity.x += 1
@@ -30,4 +30,4 @@ func _process(delta):
 	
 	velocity = velocity.normalized() * speed
 	
-	position += velocity * delta
+	move_and_slide(velocity)
