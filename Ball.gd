@@ -16,7 +16,7 @@ func _ready():
 	pass # Replace with function body.
 	pos_x = 0
 	pos_y = 0
-	speed = 300
+	speed = 200
 	position = Vector2(pos_x, pos_y)
 	
 	
